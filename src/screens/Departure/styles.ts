@@ -4,9 +4,9 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   background-color: ${({theme}) => theme.COLORS.GRAY_800};
 `
-export const Containt = styled.View`
-  background-color: ${({theme}) => theme.COLORS.GRAY_700};
-  
-  margin: 30px;
-  border-radius: 8px;
+export const Content = styled.View`
+  flex: 1;
+  gap: 16px;
+  padding: 32px;
+  margin-top: 16px;
 `
