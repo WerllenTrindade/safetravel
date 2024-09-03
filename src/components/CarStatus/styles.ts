@@ -4,11 +4,10 @@ import styled from 'styled-components/native';
 
 export const Container = styled(TouchableOpacity)`
   width: 100%;
-  padding: 32px 0;
   padding: 22px;
   border-radius: 6px;
 
-
+  margin: 25px 0;
   background-color: ${({theme}) => theme.COLORS.GRAY_700};
   flex-direction: row;
   align-items: center;
@@ -17,7 +16,7 @@ export const Container = styled(TouchableOpacity)`
 export const IconBox = styled.View`
   width: 77px;
   height: 77px;
-  borde-radius: 6px;
+  border-radius: 6px;
   background-color: ${({theme}) => theme.COLORS.GRAY_600};
 
   margin-right: 12px;

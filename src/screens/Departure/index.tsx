@@ -10,7 +10,7 @@ import { useRealm } from '../../libs/realm';
 import { Historic } from '../../libs/realm/schemas/Historic';
 import { useUser } from '@realm/react';
 import { useNavigation } from '@react-navigation/native';
-
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 export default function Departure() {
   const [description, setDescription] = useState('');
   const [licensePlate, setLicensePlate] = useState('');
@@ -24,8 +24,6 @@ export default function Departure() {
   const descriptionRef = useRef<TextInput>(null);
   const licencePlateRef = useRef<TextInput>(null);
   
-  const KeyboardAvoidingViewBehavior = Platform.OS === 'android' ? 'height' : 'position';
-
   function handleDepartureRegister() {
     try {
       if (!licensePlateValidate(licensePlate)) {
@@ -48,7 +46,7 @@ export default function Departure() {
         }))
       })
 
-      return Alert.alert('Saída', 'Saída do veículo registrada com sucesso!');
+      Alert.alert('Saída', 'Saída do veículo registrada com sucesso!');
 
       goBack();
     } catch (error) {
@@ -63,7 +61,7 @@ export default function Departure() {
     <Container>
       <Header title='Saida' />
 
-      <KeyboardAvoidingView style={{ flex: 1 }} behavior={KeyboardAvoidingViewBehavior}>
+      <KeyboardAwareScrollView style={{ flex: 1 }} extraHeight={100}>
         <ScrollView>
           <Content>
             <LicencePlateInput
@@ -86,16 +84,14 @@ export default function Departure() {
               onChangeText={setDescription}
               value={description}
             />
-
+            
             <Button
               isLoading={isRegistering}
               title='Registrar Saída'
               onPress={handleDepartureRegister} />
           </Content>
         </ScrollView>
-      </KeyboardAvoidingView>
-
-
+      </KeyboardAwareScrollView>
     </Container>
   );
 }

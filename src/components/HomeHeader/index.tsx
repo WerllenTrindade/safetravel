@@ -16,7 +16,6 @@ export default function HomeHeader() {
     app.currentUser?.logOut();
   }
 
-  console.log(user?.profile.pictureUrl)
   return (
     <Container style={{ paddingTop }}>
       <Picture 
