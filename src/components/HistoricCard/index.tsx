@@ -18,7 +18,6 @@ type Props = TouchableOpacityProps & {
 
 export function HistoricCard({data, ...rest}: Props) {
     const { licensePlate, created, isSync } = data;
-    console.log(isSync)
     return (
         <Container activeOpacity={0.7} {...rest}>
             <Info>

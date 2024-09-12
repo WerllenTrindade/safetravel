@@ -21,7 +21,6 @@ const varianteSizeStyles = (size: SizeProps) => {
 }
 
 export const Container = styled.View<Props>`
-  flex: 1;
   background-color: ${theme.COLORS.GRAY_700};
 
   justify-content: center;

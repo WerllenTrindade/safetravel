@@ -16,6 +16,13 @@ export const Message = styled.Text`
   font-family: ${({theme}) => theme.FONT_FAMILY.REGULAR};
   text-align: center;
   margin-top: 24px;
-
+  margin-bottom: 44px;
   
 `
+
+export const MesssageContent = styled.View`
+  flex: 1;
+  justify-items: center;
+  padding: 24px;
+`
+
